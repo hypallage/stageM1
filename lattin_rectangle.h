@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
-#include "lattin_check.h"
+#include "element.h"
 
 class Latinrectangle {
 private:
@@ -11,7 +11,8 @@ private:
 	int line;
 	bool b;
 	vector<el*> rectangle;
-public:
+public:	
+	Latinrectangle(int);
 	int getsize();
 	int getline();
 	bool getb ();

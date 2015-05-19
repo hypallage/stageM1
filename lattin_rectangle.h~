@@ -11,12 +11,14 @@ private:
 	int line;
 	bool b;
 	vector<el*> rectangle;
-public:
+public:	
+	Latinrectangle(int);
 	int getsize();
 	int getline();
 	bool getb ();
 	el* getel (int, int);
 	void setsize (int);
+	void setline (int);
 	void setb (bool);
 	void setel (el*,int,int);}
 ;
