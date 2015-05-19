@@ -17,7 +17,6 @@ public:
 	bool getb ();
 	el* getel (int, int);
 	void setsize (int);
-	void setline (int);
 	void setb (bool);
 	void setel (el*,int,int);}
 ;
