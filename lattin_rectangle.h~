@@ -3,7 +3,7 @@
 #include <cstdlib>
 #include <string>
 #include <vector>
-#include "lattin_check.h"
+#include "element.h"
 
 class Latinrectangle {
 private:
@@ -20,5 +20,8 @@ public:
 	void setsize (int);
 	void setline (int);
 	void setb (bool);
-	void setel (el*,int,int);}
+	void setel (el*,int,int);
+	void write (string);
+	void addline ();
+}
 ;

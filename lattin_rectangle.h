@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include "element.h"
+#include <fstream>
 
 class Latinrectangle {
 private:
@@ -20,5 +21,8 @@ public:
 	void setsize (int);
 	void setline (int);
 	void setb (bool);
-	void setel (el*,int,int);}
+	void setel (el*,int,int);
+	void write (std::string);
+	void addline ();
+}
 ;

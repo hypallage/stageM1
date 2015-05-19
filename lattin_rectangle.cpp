@@ -26,3 +26,5 @@ void Latinrectangle::setline (int i){this->line= i;}
 void Latinrectangle::setb (bool bo){this->b= bo;}
 
 void Latinrectangle::setel (el* element, int i, int j){this->rectangle[i+this->getsize()*j]= element;}
+
+void Latinrectangle::addline () {}
