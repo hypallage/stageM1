@@ -28,6 +28,13 @@ Latinrectangle l(2);
 cout<<l.getb ()<<endl;
 cout<<l.getsize ()<<endl;
 cout<<l.getline ()<<endl;
-
+cout<<"addline"<<endl;
+l.addline();
+cout<<l.getb ()<<endl;
+cout<<l.getsize ()<<endl;
+cout<<l.getline ()<<endl;
+l.setel(&A0,0,0);
+l.setel(&A1,1,0);
+l.addline();
 return 0;
 }

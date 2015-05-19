@@ -25,9 +25,15 @@ Union (&A0,&A1);
 cout<<(find (&A0)==&A0)<<endl;
 cout<<(find (&A0)==&A1)<<endl;
 Latinrectangle l(2);
-cout<<A0.getb ()<<endl;
-cout<<A0.getsize ()<<endl;
-cout<<A0.getline ()<<endl;
-
+cout<<l.getb ()<<endl;
+cout<<l.getsize ()<<endl;
+cout<<l.getline ()<<endl;
+cout<<"addline"<<endl;
+l.addline();
+cout<<l.getb ()<<endl;
+cout<<l.getsize ()<<endl;
+cout<<l.getline ()<<endl;
+l.setel(&A0,0,0);
+l.setel(&A1,1,0);
 return 0;
 }
