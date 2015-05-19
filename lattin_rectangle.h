@@ -5,6 +5,8 @@
 #include <vector>
 #include "element.h"
 #include <fstream>
+#include <string>
+
 
 class Latinrectangle {
 private:
@@ -24,5 +26,6 @@ public:
 	void setel (el*,int,int);
 	void write (std::string);
 	void addline ();
+	bool addel (int j); 
 }
 ;

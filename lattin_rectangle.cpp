@@ -4,7 +4,25 @@
 #include <string>
 #include <vector>
 #include "lattin_rectangle.h"
+#include <fstream>
+#include <string>
+#include<sstream>
 
+    
+using namespace std;
+
+template <typename T>
+    std::string to_string(T value)
+    {
+      //create an output string stream
+      std::ostringstream os ;
+
+      //throw the value into the string stream
+      os << value ;
+
+      //convert the string stream into a string and return
+      return os.str() ;
+    }
 // constructor
 
 Latinrectangle::Latinrectangle(int i):size(i), line(0), b(true){}
@@ -27,6 +45,8 @@ void Latinrectangle::setb (bool bo){this->b= bo;}
 
 void Latinrectangle::setel (el* element, int i, int j){this->rectangle.at(i+this->getsize()*j)= element;}
 
+// add a line and put all the father to NULL
+
 void Latinrectangle::addline () {for (int i=0; i<this->getsize() ; i ++){
 					this->rectangle.push_back(NULL);
 					for (int j=0; j<this->getline(); j++){
@@ -35,6 +55,18 @@ void Latinrectangle::addline () {for (int i=0; i<this->getsize() ; i ++){
 					this->setline (this->getline()+1);
 				}
 
-
-
-
+void Latinrectangle::write (std::string f){
+	ofstream fichier(f.c_str(), ios::out);
+	fichier<<this->getsize()<<"\n";
+	for (int j=0;j<this->getline ();j ++){
+		for (int i=0;i<this->getsize ();i++){
+			int a=this->rectangle.at(i + j*this->getsize())->getnumber ();
+			int b=to_string(a).size()-to_string(this->getsize()).size();
+			fichier<<a;
+			for (int l=0;l<=b;l++){
+						fichier<<" ";
+						}
+			}
+		fichier<<"\n";}
+	}
+	
