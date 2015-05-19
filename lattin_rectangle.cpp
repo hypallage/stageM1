@@ -5,6 +5,10 @@
 #include <vector>
 #include "lattin_rectangle.h"
 
+// constructor
+
+Latinrectangle::Latinrectangle(int i):size(i), line(0), b(true){}
+
 // get fonctions
 int Latinrectangle::getsize(){return this->size;}
 
