@@ -11,7 +11,11 @@ using namespace std;
 
 int main()
 {
-el A0=el(string("e"),0,NULL);
+vector<int> v;
+el A0=el(string("e"),0);
+
+
+/*
 el A1=el(string("r"),1,NULL);
 el A2=el(string("z"),1,NULL);
 el A3=el(string("f"),0,NULL);
@@ -43,5 +47,6 @@ l.addline();
 l.setel(&A2,0,1);
 l.setel(&A3,1,1);
 l.write(string("fichier.plr"));
+*/
 return 0;
 }

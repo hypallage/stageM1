@@ -26,6 +26,6 @@ public:
 	void setel (el*,int,int);
 	void write (std::string);
 	void addline ();
-	bool addel (int j); 
+	bool addel (int ,el*);  // add the element at the given position on the current line
 }
 ;

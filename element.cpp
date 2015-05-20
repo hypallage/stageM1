@@ -7,7 +7,14 @@
 
 using namespace std;
 
-el::el(string s,int i, el* e):symbols(s), number(i), father(e){}
+el::el(string s,int i , vector<int> v, int j): symbols (s), number(i), father(NULL){
+										v.push_back(i);
+										this->predecessor=v;
+										}
+el::el(string s,int i): symbols (s), number(i), father(NULL){
+										vector<int> v;
+										this->predecessor=v;
+										}
 
 //get fonctions
 string el::getsymbols () {return this->symbols;}
@@ -15,6 +22,11 @@ string el::getsymbols () {return this->symbols;}
 int el::getnumber () {return this->number;}
 
 el* el::getfather ()  {return this->father;}
+
+int el::getapredecessor(int i){return this->predecessor.at(i);}
+
+vector<int> el::getpredecessor(){return this->predecessor;}
+
 //set fonctions
 void el::setsymbols (string s) {this->symbols= s;}
 

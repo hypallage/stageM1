@@ -70,3 +70,5 @@ void Latinrectangle::write (std::string f){
 		fichier<<"\n";}
 	}
 	
+
+
