@@ -8,5 +8,11 @@
 #include <string>
 #include<sstream>
 
-class lattin_check {
+class cyclearray{
+private:
+	vector<vector<vector<el*> > > cycles;
+public :
+	cyclearray(int);
+	
 }
+;

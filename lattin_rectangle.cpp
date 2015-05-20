@@ -47,12 +47,10 @@ void Latinrectangle::setel (el* element, int i, int j){this->rectangle.at(i+this
 
 // add a line and put all the father to NULL
 
-void Latinrectangle::addline () {for (int i=0; i<this->getsize() ; i ++){
+void Latinrectangle::addline () {
+				for (int i=0; i<this->getsize() ; i ++){
 					this->rectangle.push_back(NULL);
-					for (int j=0; j<this->getline(); j++){
-						this->rectangle.at(i + j*this->getsize())->setfather(NULL);}
-					}
-					this->setline (this->getline()+1);
+					this->setline (this->getline()+1);}
 				}
 
 void Latinrectangle::write (std::string f){

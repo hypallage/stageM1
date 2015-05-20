@@ -8,45 +8,54 @@
 #include <string>
 
 using namespace std;
+void lattinall (int );
 
 int main()
 {
-vector<int> v;
-el A0=el(string("e"),0);
-
-
-/*
-el A1=el(string("r"),1,NULL);
-el A2=el(string("z"),1,NULL);
-el A3=el(string("f"),0,NULL);
-cout<<A0.getsymbols ()<<endl;
-cout<<A0.getnumber ()<<endl;
-cout<<(A0.getfather ()==NULL)<<endl;
-cout<<(find (&A0)==&A0)<<endl;
-cout<<(find (&A0)->getnumber())<<endl;
-A0.setsymbols (string ("7"));
-cout<<A0.getsymbols ()<<endl;
-A0.setnumber (7);
-cout<<A0.getnumber ()<<endl;
-A0.setnumber (0);
-Union (&A0,&A1);
-cout<<(find (&A0)==&A0)<<endl;
-cout<<(find (&A0)==&A1)<<endl;
-Latinrectangle l(2);
-cout<<l.getb ()<<endl;
-cout<<l.getsize ()<<endl;
-cout<<l.getline ()<<endl;
-cout<<"addline"<<endl;
-l.addline();
-cout<<l.getb ()<<endl;
-cout<<l.getsize ()<<endl;
-cout<<l.getline ()<<endl;
-l.setel(&A0,0,0);
-l.setel(&A1,1,0);
-l.addline();
-l.setel(&A2,0,1);
-l.setel(&A3,1,1);
-l.write(string("fichier.plr"));
-*/
+lattinall (3);
 return 0;
 }
+
+void lattinall (int size){
+Latinrectangle pls(size);
+vector<vector<bool> > elcolumn;
+vector<bool> elline;
+for (int i=0;i<size;i++){
+	elline.push_back(false);}
+for (int i=0;i<size;i++){
+	elcolumn.push_back(elline);}
+for (int i=0;i<size;i++){
+	pls.addline();}
+int j=0;
+int i=0;
+int number;
+while (j<size){
+	cout<<"i="<<i<<endl;
+	cout<<"j="<<j<<endl;
+	if (pls.getel(i,j)==NULL){number=0;}
+	else {number=pls.getel(i,j)->getnumber()+1;}
+	bool numbergood= false;
+	while (!numbergood && number<<size){
+		numbergood=true;
+		while (elline.at(number) ){numbergood=false;number++;}
+		for (int l=0;l<size;l++){
+		while (elcolumn.at(l).at(number) && numbergood){numbergood=false;number++;}}
+		if (j!=0){
+			el* mypredecessor;
+			for (int l=0;l<size;l++){
+						if (pls.getel(i,j-1)->getnumber()==number){mypredecessor=pls.getel(i,j-1);}
+						}
+			}
+			while (elcolumn.at(l).at(number) && numbergood)
+		}
+	i++;
+	j++;
+	cout<<"i="<<i<<endl;
+	cout<<"j="<<j<<endl;
+	}
+}
+
+
+
+
+
