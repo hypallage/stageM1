@@ -16,6 +16,7 @@ private:
 	vector<el*> rectangle;
 public:	
 	Latinrectangle(int);
+	Latinrectangle();
 	int getsize();
 	int getline();
 	bool getb ();
@@ -25,6 +26,7 @@ public:
 	void setb (bool);
 	void setel (el*,int,int);
 	void write (std::string);
+	void print ();
 	void addline ();
 }
 ;

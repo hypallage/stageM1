@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
-#include "lattin_rectangle.h"
+#include "parser.h"
 #include <string>
 #include <vector>
 #include <fstream>
@@ -12,10 +12,12 @@ void lattinall (int );
 
 int main()
 {
-lattinall (3);
+
+Latinrectangle l=openfile ("fichier.plr");
 return 0;
 }
 
+/*
 void lattinall (int size){
 Latinrectangle pls(size);
 vector<vector<bool> > elcolumn;
@@ -55,7 +57,7 @@ while (j<size){
 	}
 }
 
-
+*/
 
 
 

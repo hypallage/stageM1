@@ -24,7 +24,7 @@ template <typename T>
       return os.str() ;
     }
 // constructor
-
+Latinrectangle::Latinrectangle(): size(0), line(0), b(true){}
 Latinrectangle::Latinrectangle(int i):size(i), line(0), b(true){}
 
 // get fonctions
@@ -66,6 +66,21 @@ void Latinrectangle::write (std::string f){
 						}
 			}
 		fichier<<"\n";}
+	}
+
+
+void Latinrectangle::print (){
+	cout<<"/n";
+	for (int j=0;j<this->getline ();j ++){
+		for (int i=0;i<this->getsize ();i++){
+			int a=this->rectangle.at(i + j*this->getsize())->getnumber ();
+			int b=to_string(a).size()-to_string(this->getsize()).size();
+			cout<<a;
+			for (int l=0;l<=b;l++){
+						cout<<" ";
+						}
+			}
+		cout<<"\n";}
 	}
 	
 
