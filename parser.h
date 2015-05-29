@@ -1,7 +1,7 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
-#include "lattin_rectangle.h"
+#include "lattin_check.h"
 #include <string>
 #include <vector>
 #include <fstream>

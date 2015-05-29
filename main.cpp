@@ -2,6 +2,7 @@
 #include <ctime>
 #include <cstdlib>
 #include "parser.h"
+#include "lattin_check.h"
 #include <string>
 #include <vector>
 #include <fstream>
@@ -14,6 +15,9 @@ int main()
 {
 
 Latinrectangle l=openfile ("fichier.plr");
+cyclearray c=cyclearray (l);
+Latincheck(c);
+l.print();
 return 0;
 }
 

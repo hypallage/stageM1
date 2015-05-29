@@ -1,3 +1,6 @@
+#ifndef LATINRECTANGLE_H
+#define LATINRECTANGLE_H
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -14,7 +17,7 @@ private:
 	int line;
 	bool b;
 	vector<el*> rectangle;
-public:	
+public:
 	Latinrectangle(int);
 	Latinrectangle();
 	int getsize();
@@ -30,3 +33,5 @@ public:
 	void addline ();
 }
 ;
+
+#endif

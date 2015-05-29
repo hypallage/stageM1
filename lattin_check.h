@@ -1,3 +1,6 @@
+#ifndef CYCLEARRAY_H
+#define CYCLEARRAY_H
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
@@ -11,15 +14,27 @@
 class cyclearray{
 private:
 	vector<vector<vector<el*> > > cycles;
-	vector<vector<bool> > elcolumn;
-	vector<bool> elline;
+	vector<vector<int> > elcolumn;
+	vector<vector<int> > elline;
 	Latinrectangle lattin;
 public :
 	Latinrectangle* getlattin ();
-	bool available (int, int );
-	void addacycle (vector<el*>,int,int);
-	void printcycle (int,int);
-	cyclearray(int);
-	
+	bool available (int l,int c, int el);
+	int getposc (int c,int el) ;
+	int getposl (int l,int el) ;
+	void addacycle (vector<el*> cycle,int l,int c);
+	void printcycle (int l,int c);
+	void setnumberl (int el,int l,int c);
+	void setnumberc (int el,int l,int c);
+	cyclearray(Latinrectangle);
+
 }
 ;
+#endif
+
+
+void Latincheck(cyclearray);
+
+int check(cyclearray*,int);
+
+vector<int> calculcylce(cyclearray* Latin,int line,int pred,int column);

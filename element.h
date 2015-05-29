@@ -1,8 +1,16 @@
+#ifndef EL_H
+#define EL_H
+
+
+
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
 #include <string>
 #include <vector>
+
+
+
 
 using namespace std;
 class el {
@@ -20,7 +28,7 @@ public:
 	void setnumber (int);
 	void setsymbols (string);
 	void setfather (el* );
-	
+
 	el(string,int , vector<int>, int);
 	el(string s,int i);
 }
@@ -28,4 +36,4 @@ public:
 void Union ( el*, el*);
 el* find ( el* x);
 
-
+#endif
