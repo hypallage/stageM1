@@ -2,4 +2,4 @@ brouillon
 *.o
 *.exec
 *~
-*.plr
+.plr
