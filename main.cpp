@@ -15,14 +15,11 @@ int main()
 {
 
 Latinrectangle l=openfile ("fichier.plr");
-cout<<l.getsize()<<endl;
-cyclearray c=cyclearray (&l);
-cout<<c.getlattin()->getsize()<<endl;
-Latincheck(&c);
+//cyclearray c=cyclearray (&l);
+//Latincheck(&c);
 
 l.print();
-cout << "cocu"<<endl;
-c.getlattin()->print();
+//c.getlattin()->print();
 
 //c.printcycle(0,0);
 return 0;

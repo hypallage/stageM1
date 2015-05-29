@@ -97,13 +97,15 @@ void Latincheck(cyclearray* Latin){
                             for (int i;i<Latin->getlattin()->getsize();i++){
                                 v.push_back(false);}
                             int first=0;
+                            while (first<Latin->getlattin()->getsize()){
                             vector<el*> cycle=calculcylce(v,Latin,line,pred,first);
                             if (cycle.size()==Latin->getlattin()->getsize())
                                 {first=Latin->getlattin()->getsize();}
                             else
                                 {Latin->addacycle(cycle,line,pred);
-                                while (v.at(first)=true){first++;}
+                                while (first<Latin->getlattin()->getsize() && v.at(first)==true){first++;}
                                 }
+                            }
 
                             }
 
