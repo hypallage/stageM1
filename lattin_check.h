@@ -16,25 +16,25 @@ private:
 	vector<vector<vector<el*> > > cycles;
 	vector<vector<int> > elcolumn;
 	vector<vector<int> > elline;
-	Latinrectangle lattin;
+	Latinrectangle* lattin;
 public :
 	Latinrectangle* getlattin ();
 	bool available (int l,int c, int el);
 	int getposc (int c,int el) ;
 	int getposl (int l,int el) ;
-	void addacycle (vector<el*> cycle,int l,int c);
+	void addacycle (vector<el*> cycle,int l,int p);
 	void printcycle (int l,int c);
 	void setnumberl (int el,int l,int c);
 	void setnumberc (int el,int l,int c);
-	cyclearray(Latinrectangle);
+	cyclearray(Latinrectangle*);
 
 }
 ;
 #endif
 
 
-void Latincheck(cyclearray);
+void Latincheck(cyclearray*);
 
 int check(cyclearray*,int);
 
-vector<int> calculcylce(cyclearray* Latin,int line,int pred,int column);
+vector<el*> calculcylce(vector<bool> v, cyclearray* Latin,int line,int pred,int column);

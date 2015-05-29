@@ -7,11 +7,11 @@
 
 using namespace std;
 
-el::el(string s,int i , vector<int> v, int j): symbols (s), number(i), father(NULL){
+el::el(string s,int i , vector<int> v, int j): number(i),  father(NULL),symbols (s){
 										v.push_back(i);
 										this->predecessor=v;
 										}
-el::el(string s,int i): symbols (s), number(i), father(NULL){
+el::el(string s,int i): number(i),father(NULL) ,symbols (s) {
 										vector<int> v;
 										this->predecessor=v;
 										}
@@ -31,9 +31,9 @@ vector<int> el::getpredecessor(){return this->predecessor;}
 void el::setsymbols (string s) {this->symbols= s;}
 
 void el::setnumber (int i) {this->number= i;}
-	
+
 void el::setfather (el* father) {this->father= father;}
-	
+
 //union-find fonctions
 void Union ( el* x , el* y){x->setfather (y);}
 
