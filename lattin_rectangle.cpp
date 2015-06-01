@@ -69,13 +69,13 @@ void Latinrectangle::write (std::string f){
 
 
 void Latinrectangle::print (){
-    cout<<"coucou"<<endl;
+    //cout<<"coucou"<<endl;
 	for (int j=0;j<this->getline ();j ++){
 		for (int i=0;i<this->getsize ();i++){
 		    //cout<<i<<endl;
 		    //cout<<j<<endl;
 			int a=this->rectangle.at(i + j*this->getsize())->getnumber ();
-			int b=to_string(a).size()-to_string(this->getsize()).size();
+			int b=-to_string(a).size()+to_string(this->getsize()).size();
 			cout<<a;
 			for (int l=0;l<=b;l++){
 						cout<<" ";

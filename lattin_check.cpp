@@ -26,9 +26,13 @@ cyclearray::cyclearray( Latinrectangle* l){
 					eelcolumn.push_back(aline);}
 				this->elcolumn=eelcolumn;
 				this->elline=eelcolumn;
-				cout<< this->getlattin()->getsize();
+				vector<vector<el*> > v;
+				for (int i=0;i<(l->getsize()-1)*(l->getsize())/2;i++)
+				{this->cycles.push_back(v);}
+				//cout<< this->getlattin()->getsize();
+				//cout<<"continue"<<endl;
 				}
-
+vector<vector<vector<el*> > >* cyclearray::getcycles(){return &this->cycles;}
 
 bool cyclearray::available (int c,int l, int el){return (this->elline.at(l).at(el)==-1) && (this->elcolumn.at(c).at(el)==-1);}
 
@@ -58,8 +62,6 @@ void cyclearray::setnumberc (int el,int l,int c){this->elcolumn.at(c).at(el)=l;}
 
 int check(cyclearray* Latin,int line){
 					bool problem=false;
-
-
 					int column=0;
 					while (!problem && column<Latin->getlattin()->getsize()){
 						int num=Latin->getlattin()->getel(line,column)->getnumber();
@@ -70,16 +72,17 @@ int check(cyclearray* Latin,int line){
 						else
 						{problem=true;}
 						column++;}
+                    for (int r=0;r<Latin->getlattin()->getsize();r++){cout<<r<<" "<<Latin->getposl(line,r)<<endl;}
                     if (problem)
 					{column--;return column;}
 					else
-					{return -1;}
+					{cout<<"np"<<endl;return -1;}
 
             }
 
 void Latincheck(cyclearray* Latin){
 				bool problem=false;int line=0;
-                cout<<Latin->getlattin()->getsize()<<endl;
+                //cout<<Latin->getlattin()->getsize()<<endl;
 				while (!problem && line<Latin->getlattin()->getsize()){
                     int checkl=check(Latin,line);
                     cout<<"ligne "<<line<<endl;
@@ -92,18 +95,20 @@ void Latincheck(cyclearray* Latin){
                             {printf("The number %d appears twice in the column %d \none in the line %d and one in the line %d\n",l,checkl,Latin->getposc(checkl,l),line);}
                     }
                     else {
-                        vector<bool> v;
-                        for (int pred;pred<line;pred++){
-                            for (int i;i<Latin->getlattin()->getsize();i++){
-                                v.push_back(false);}
+                        vector<bool>* v;
+                         cout<<"firt="<<endl;
+                        for (int pred=0;pred<line;pred++){
+                            for (int i=0;i<Latin->getlattin()->getsize();i++){
+                                cout<<i<<endl;v->push_back(false);}
                             int first=0;
                             while (first<Latin->getlattin()->getsize()){
+                            cout<<"firt="<<first<<endl;
                             vector<el*> cycle=calculcylce(v,Latin,line,pred,first);
                             if (cycle.size()==Latin->getlattin()->getsize())
                                 {first=Latin->getlattin()->getsize();}
                             else
                                 {Latin->addacycle(cycle,line,pred);
-                                while (first<Latin->getlattin()->getsize() && v.at(first)==true){first++;}
+                                while (first<Latin->getlattin()->getsize() && v->at(first)==true){first++;}
                                 }
                             }
 
@@ -113,21 +118,28 @@ void Latincheck(cyclearray* Latin){
                 line++;}
 }
 
-vector<el*> calculcylce(vector<bool> v,cyclearray* Latin,int line,int pred,int column){
+vector<el*> calculcylce(vector<bool>* v,cyclearray* Latin,int line,int pred,int column){
     vector<el*> rep;
-    cout<<"Je cacule un cycle"<<endl;
-    cout<<line<<endl;
-    cout<<pred<<endl;
-    cout<<column<<endl;
+    //cout<<"Je cacule un cycle"<<endl;
+    //cout<<"line"<<line<<endl;
+    //cout<<"pred"<<pred<<endl;
+    //cout<<"column"<<column<<endl;
     el* debut=Latin->getlattin()->getel(line,column);
+    //cout<<debut->getnumber()<<endl;
     int col=column;
     el* ajout;
-    while (ajout!=debut){
+    while (ajout->getnumber()!=debut->getnumber()){
         ajout=Latin->getlattin()->getel(pred,col);
         col=Latin->getposl(line,ajout->getnumber());
-        v.at(ajout->getnumber())=true;
-        cout<<" "<<ajout->getnumber();
+        //cout<<ajout->getnumber()<<endl;
+        v->at(ajout->getnumber())=true;
         rep.push_back(ajout);}
-    cout<<endl;return rep;
+        return rep;
 }
 
+bool perfect(cyclearray* c){
+    cout<<c->getcycles()->size();
+    for (int i=0;i<c->getcycles()->size();i++){cout<<c->getcycles()->at(i).size()<<endl;}
+
+    return true;
+}

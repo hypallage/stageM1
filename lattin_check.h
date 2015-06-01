@@ -26,6 +26,7 @@ public :
 	void printcycle (int l,int c);
 	void setnumberl (int el,int l,int c);
 	void setnumberc (int el,int l,int c);
+	vector<vector<vector<el*> > >* getcycles();
 	cyclearray(Latinrectangle*);
 
 }
@@ -37,4 +38,7 @@ void Latincheck(cyclearray*);
 
 int check(cyclearray*,int);
 
-vector<el*> calculcylce(vector<bool> v, cyclearray* Latin,int line,int pred,int column);
+vector<el*> calculcylce(vector<bool>* v, cyclearray* Latin,int line,int pred,int column);
+
+bool perfect(cyclearray* c);
+
