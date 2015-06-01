@@ -96,10 +96,12 @@ void Latincheck(cyclearray* Latin){
                     }
                     else {
                         vector<bool>* v;
-                         cout<<"firt="<<endl;
+                         //cout<<"firt="<<endl;
                         for (int pred=0;pred<line;pred++){
                             for (int i=0;i<Latin->getlattin()->getsize();i++){
-                                cout<<i<<endl;v->push_back(false);}
+                                v->push_back(false);}
+                                cout<<"pred"<<pred<<endl;
+                                cout<<"line"<<line<<endl;
                             int first=0;
                             while (first<Latin->getlattin()->getsize()){
                             cout<<"firt="<<first<<endl;
@@ -138,8 +140,9 @@ vector<el*> calculcylce(vector<bool>* v,cyclearray* Latin,int line,int pred,int 
 }
 
 bool perfect(cyclearray* c){
-    cout<<c->getcycles()->size();
-    for (int i=0;i<c->getcycles()->size();i++){cout<<c->getcycles()->at(i).size()<<endl;}
+    //cout<<c->getcycles()->size();
+    for (int i=0;i<c->getcycles()->size();i++){if (c->getcycles()->at(i).size())
+                                                {cout<<c->getcycles()->at(i).size()<<endl;}}
 
     return true;
 }
