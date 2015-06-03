@@ -72,11 +72,11 @@ int check(cyclearray* Latin,int line){
 						else
 						{problem=true;}
 						column++;}
-                    for (int r=0;r<Latin->getlattin()->getsize();r++){cout<<r<<" "<<Latin->getposl(line,r)<<endl;}
+                    //for (int r=0;r<Latin->getlattin()->getsize();r++){cout<<r<<" "<<Latin->getposl(line,r)<<endl;}
                     if (problem)
 					{column--;return column;}
 					else
-					{cout<<"np"<<endl;return -1;}
+					{return -1;}
 
             }
 
@@ -110,8 +110,9 @@ void Latincheck(cyclearray* Latin){
                                 {first=Latin->getlattin()->getsize();}
                             else
                                 {Latin->addacycle(cycle,line,pred);
-                                while (first<Latin->getlattin()->getsize() && v->at(first)==true){first++;}
+                                while (first<Latin->getlattin()->getsize() && v->at(first)==true){cout<<v->at(first)<<endl;cout<<"first++"<<endl;first++;}
                                 }
+                            cout<<"first"<<first<<endl;
                             }
 
                             }
@@ -127,15 +128,17 @@ vector<el*> calculcylce(vector<bool>* v,cyclearray* Latin,int line,int pred,int 
     //cout<<"pred"<<pred<<endl;
     //cout<<"column"<<column<<endl;
     el* debut=Latin->getlattin()->getel(line,column);
-    //cout<<debut->getnumber()<<endl;
+    cout<<debut->getsymbols()<<endl;
     int col=column;
     el* ajout;
     while (ajout->getnumber()!=debut->getnumber()){
         ajout=Latin->getlattin()->getel(pred,col);
         col=Latin->getposl(line,ajout->getnumber());
-        //cout<<ajout->getnumber()<<endl;
+        cout<<ajout->getsymbols()<<endl;
         v->at(ajout->getnumber())=true;
         rep.push_back(ajout);}
+        cout<<"longueur"<<rep.size()<<endl;
+        //for (int i=0;i<Latin->getlattin()->getsize();i++){cout<<"Je plante"<<endl;cout<<i<<" "<<v->at(i)<<endl;}
         return rep;
 }
 

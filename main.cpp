@@ -17,13 +17,14 @@ if (argc==2)
     {
         Latinrectangle l=openfile (argv[1]);
         cyclearray c=cyclearray(&l);
+        l.print();
         Latincheck(&c);
-        cout<<"perfect"<<endl;
-        perfect(&c);
-        cout<<"What do you want?"<<endl;
-        string rep;
-        cin>>rep;
-        cout<<rep<<endl;
+        //cout<<"perfect"<<endl;
+        //perfect(&c);
+        //cout<<"What do you want?"<<endl;
+        //string rep;
+        //cin>>rep;
+        //cout<<rep<<endl;
         /*Latinrectangle l=openfile ("exemple.plr");
 cout<<l.getline()<<endl;
 //cout<<l.getel(4,3)->getnumber()<<endl;
