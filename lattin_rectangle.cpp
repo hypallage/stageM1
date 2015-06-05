@@ -34,7 +34,7 @@ int Latinrectangle::getline(){return this->line;}
 
 bool Latinrectangle::getb (){return this->b;}
 
-el* Latinrectangle::getel (int l, int c){return this->rectangle[c+this->getsize()*l];}
+el* Latinrectangle::getel (int l, int c){return this->rectangle.at(c+this->getsize()*l);}
 
 // set fonctions
 void Latinrectangle::setsize (int i){this->size= i;}
@@ -68,15 +68,15 @@ void Latinrectangle::write (std::string f){
 	}
 
 
-void Latinrectangle::print (){
+void Latinrectangle::print1 (){
     //cout<<"coucou"<<endl;
 	for (int j=0;j<this->getline ();j ++){
 		for (int i=0;i<this->getsize ();i++){
-		    //cout<<i<<endl;
-		    //cout<<j<<endl;
+		    //cout<<"i"<<i<<endl;
+		    //cout<<"j"<<j<<endl;
 			int a=this->rectangle.at(i + j*this->getsize())->getnumber ();
 			int b=-to_string(a).size()+to_string(this->getsize()).size();
-			cout<<a;
+			cout<<this->rectangle.at(i + j*this->getsize())->getsymbols ();
 			for (int l=0;l<=b;l++){
 						cout<<" ";
 						}
@@ -84,5 +84,19 @@ void Latinrectangle::print (){
 		cout<<"\n";}
 	}
 
-
+void Latinrectangle::print (){
+    //cout<<"coucou"<<endl;
+	for (int j=0;j<this->getline ();j ++){
+		for (int i=0;i<this->getsize ();i++){
+		    //cout<<"i"<<i<<endl;
+		    //cout<<"j"<<j<<endl;
+			int a=this->rectangle.at(i + j*this->getsize())->getnumber ();
+			int b=-to_string(a).size()+to_string(this->getsize()).size();
+			cout<<this->rectangle.at(i + j*this->getsize())->getnumber ();
+			for (int l=0;l<=b;l++){
+						cout<<" ";
+						}
+			}
+		cout<<"\n";}
+	}
 

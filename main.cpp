@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include "parser.h"
 #include "lattin_check.h"
+#include "construction.h"
 #include <string>
 #include <vector>
 #include <fstream>
@@ -16,9 +17,11 @@ int main(int argc,char *argv[])
 if (argc==2)
     {
         Latinrectangle l=openfile (argv[1]);
-        cyclearray c=cyclearray(&l);
         l.print();
-        Latincheck(&c);
+        //cout<<l.getel(0,1)->getnumber()<<endl;
+        Latinrectangle r=constructiond (&l);
+        r.print();
+        r.print1();
         //cout<<"perfect"<<endl;
         //perfect(&c);
         //cout<<"What do you want?"<<endl;

@@ -11,6 +11,7 @@
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
+				<Option parameters="exemple.plr" />
 				<Compiler>
 					<Add option="-g" />
 				</Compiler>
@@ -32,7 +33,17 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="construction.cpp" />
+		<Unit filename="construction.h" />
+		<Unit filename="element.cpp" />
+		<Unit filename="element.h" />
+		<Unit filename="lattin_check.cpp" />
+		<Unit filename="lattin_check.h" />
+		<Unit filename="lattin_rectangle.cpp" />
+		<Unit filename="lattin_rectangle.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="parser.cpp" />
+		<Unit filename="parser.h" />
 		<Extensions>
 			<code_completion />
 			<debugger />

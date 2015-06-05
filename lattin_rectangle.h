@@ -30,8 +30,10 @@ public:
 	void setel (el*,int,int);
 	void write (std::string);
 	void print ();
+	void print1 ();
 	void addline ();
 }
 ;
-
+template <typename T>
+    std::string to_string(T value);
 #endif

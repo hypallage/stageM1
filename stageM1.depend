@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1433338709 source:/home/pacou/Documents/stageM1/lattin_check.cpp
+1433339003 source:/home/pacou/Documents/stageM1/lattin_check.cpp
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -21,7 +21,7 @@
 	<string>
 	<sstream>
 
-1432907899 /home/pacou/Documents/stageM1/lattin_rectangle.h
+1433504904 /home/pacou/Documents/stageM1/lattin_rectangle.h
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -38,7 +38,7 @@
 	<string>
 	<vector>
 
-1433164744 source:/home/pacou/Documents/stageM1/lattin_rectangle.cpp
+1433418947 source:/home/pacou/Documents/stageM1/lattin_rectangle.cpp
 	<iostream>
 	<ctime>
 	<cstdlib>
@@ -49,12 +49,13 @@
 	<string>
 	<sstream>
 
-1433338054 source:/home/pacou/Documents/stageM1/main.cpp
+1433421441 source:/home/pacou/Documents/stageM1/main.cpp
 	<iostream>
 	<ctime>
 	<cstdlib>
 	"parser.h"
 	"lattin_check.h"
+	"construction.h"
 	<string>
 	<vector>
 	<fstream>
@@ -89,4 +90,26 @@
 	<cstdlib>
 	<string>
 	<vector>
+
+1433504225 source:/home/pacou/Documents/stageM1/construction.cpp
+	<iostream>
+	<ctime>
+	<cstdlib>
+	<string>
+	<vector>
+	"construction.h"
+	<fstream>
+	<string>
+	<sstream>
+
+1433343373 /home/pacou/Documents/stageM1/construction.h
+	<iostream>
+	<ctime>
+	<cstdlib>
+	<string>
+	<vector>
+	"lattin_rectangle.h"
+	<fstream>
+	<string>
+	<sstream>
 
