@@ -14,20 +14,24 @@
 class Latinrectangle {
 private:
 	int size;
+	int stringsize;
 	int line;
-	bool b;
 	vector<el*> rectangle;
 public:
 	Latinrectangle(int);
 	Latinrectangle();
+
 	int getsize();
 	int getline();
-	bool getb ();
-	el* getel (int, int);
+	int getstringsize();
+    el* getel (int, int);
+
 	void setsize (int);
 	void setline (int);
-	void setb (bool);
+	void setstringsize(int i);
 	void setel (el*,int,int);
+
+	void write1 (std::string);
 	void write (std::string);
 	void print ();
 	void print1 ();

@@ -8,6 +8,6 @@
 #include <string>
 #include<sstream>
 
-std::string getstring (int number, int size);
+std::string getstring (int number, int size,string s);
 
 Latinrectangle constructiond (Latinrectangle* Latin);

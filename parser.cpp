@@ -27,8 +27,10 @@ Latinrectangle openfile (std::string f){
                 {mymap.insert(std::pair<string,int>(s,j));
                 el* a=(el*)malloc(sizeof(el));
                 new (a) el(s,j);
-                l.setel (a, 0, j);}
+                l.setel (a, 0, j);
+                if (s.size()>l.getstringsize()){l.setstringsize(s.size());}
             }
+        }
         //cout<<"continue"<<endl;
         string fin="fin";
         int i=1;

@@ -12,8 +12,7 @@
 using namespace std;
 
 template <typename T>
-    std::string to_string(T value)
-    {
+    std::string to_string(T value){
       //create an output string stream
       std::ostringstream os ;
 
@@ -22,26 +21,26 @@ template <typename T>
 
       //convert the string stream into a string and return
       return os.str() ;
-    }
+}
 // constructor
-Latinrectangle::Latinrectangle(): size(0), line(0), b(true){}
-Latinrectangle::Latinrectangle(int i):size(i), line(0), b(true){}
+Latinrectangle::Latinrectangle(): size(0), stringsize(0), line(0){}
+Latinrectangle::Latinrectangle(int i):size(i), stringsize(0), line(0){}
 
 // get fonctions
+int Latinrectangle::getstringsize(){return this->stringsize;}
+
 int Latinrectangle::getsize(){return this->size;}
 
 int Latinrectangle::getline(){return this->line;}
 
-bool Latinrectangle::getb (){return this->b;}
-
 el* Latinrectangle::getel (int l, int c){return this->rectangle.at(c+this->getsize()*l);}
 
 // set fonctions
+void Latinrectangle::setstringsize(int i){this->stringsize=0;}
+
 void Latinrectangle::setsize (int i){this->size= i;}
 
 void Latinrectangle::setline (int i){this->line= i;}
-
-void Latinrectangle::setb (bool bo){this->b= bo;}
 
 void Latinrectangle::setel (el* element, int l, int c){this->rectangle.at(c+this->getsize()*l)= element;}
 
@@ -55,10 +54,10 @@ void Latinrectangle::addline () {
 void Latinrectangle::write (std::string f){
 	ofstream fichier(f.c_str(), ios::out);
 	fichier<<this->getsize()<<"\n";
-	for (int j=0;j<this->getline ();j ++){
+	for (int j=0;j<this->getline();j ++){
 		for (int i=0;i<this->getsize ();i++){
 			int a=this->rectangle.at(i + j*this->getsize())->getnumber ();
-			int b=to_string(a).size()-to_string(this->getsize()).size();
+			int b=-to_string(a).size()+to_string(this->getsize()).size();
 			fichier<<a;
 			for (int l=0;l<=b;l++){
 						fichier<<" ";
@@ -74,8 +73,8 @@ void Latinrectangle::print1 (){
 		for (int i=0;i<this->getsize ();i++){
 		    //cout<<"i"<<i<<endl;
 		    //cout<<"j"<<j<<endl;
-			int a=this->rectangle.at(i + j*this->getsize())->getnumber ();
-			int b=-to_string(a).size()+to_string(this->getsize()).size();
+			int a=this->rectangle.at(i + j*this->getsize())->getsymbols().size();
+			int b=1-a+to_string(this->getsize()).size();
 			cout<<this->rectangle.at(i + j*this->getsize())->getsymbols ();
 			for (int l=0;l<=b;l++){
 						cout<<" ";
@@ -100,3 +99,17 @@ void Latinrectangle::print (){
 		cout<<"\n";}
 	}
 
+void Latinrectangle::write1 (std::string f){
+	ofstream fichier(f.c_str(), ios::out);
+	fichier<<this->getsize()<<"\n";
+	for (int j=0;j<this->getline ();j ++){
+		for (int i=0;i<this->getsize ();i++){
+			int a=this->rectangle.at(i + j*this->getsize())->getsymbols().size();
+			int b=1-a+to_string(this->getsize()).size();
+			fichier<<this->rectangle.at(i + j*this->getsize())->getsymbols ();
+			for (int l=0;l<=b;l++){
+						fichier<<" ";
+						}
+			}
+		fichier<<"\n";}
+	}

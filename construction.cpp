@@ -17,16 +17,17 @@ Latinrectangle constructiond (Latinrectangle* latin) {
     for (int i=1;i<size;i++){
         for (int j=1;j<size;j++){
             int number=latin->getel(i,j)->getnumber();
+            string s=latin->getel(i,j)->getsymbols();
             el* a=(el*)malloc(sizeof(el));
-            new (a) el(getstring(number,size),number);
+            new (a) el(getstring(number,size,s),number);
             rep.setel(a,i,j); //1 ere matrice
 
             el* a2=(el*)malloc(sizeof(el));
-            new (a2) el(getstring(number,size),number);
+            new (a2) el(getstring(number,size,s),number);
             rep.setel(a2,i+size-1,j+size-1); //2 eme matrice
             if (number!=0){
                 el* a3=(el*)malloc(sizeof(el));
-                new (a3) el(getstring(number+size-1,size),number+size-1);
+                new (a3) el(getstring(number+size-1,size,s),number+size-1);
                 rep.setel(a3,i,j+size-1);
             }
             else{v.push_back(j);}
@@ -34,25 +35,27 @@ Latinrectangle constructiond (Latinrectangle* latin) {
         }
     }
     el* a=(el*)malloc(sizeof(el));
-    new (a) el(getstring(latin->getel(0,0)->getnumber(),size),latin->getel(0,0)->getnumber());
+    new (a) el(getstring(latin->getel(0,0)->getnumber(),size,latin->getel(0,0)->getsymbols()),latin->getel(0,0)->getnumber());
     rep.setel(a,0,0);
     for (int i=1;i<size;i++){//bord horizontal
         int number=latin->getel(0,i)->getnumber();
+        string s=latin->getel(0,i)->getsymbols();
         el* a=(el*)malloc(sizeof(el));
-        new (a) el(getstring(number+size-1,size),number+size-1);
+        new (a) el(getstring(number+size-1,size,s),number+size-1);
         rep.setel(a,0,i);//avec barre
         el* a2=(el*)malloc(sizeof(el));
-        new (a2) el(getstring(number,size),number);
+        new (a2) el(getstring(number,size,s),number);
         rep.setel(a2,0,i+size-1);//sans barre
         //cout<<a2->getnumber();
     }
     for (int i=1;i<size;i++){//bord vertical
         int number=latin->getel(i,0)->getnumber();
+        string s=latin->getel(i,0)->getsymbols();
         el* a=(el*)malloc(sizeof(el));
-        new (a) el(getstring(number+size-1,size),number+size-1);
+        new (a) el(getstring(number+size-1,size,s),number+size-1);
         rep.setel(a,i,0);//avec barre
         el* a2=(el*)malloc(sizeof(el));
-        new (a2) el(getstring(number,size),number);
+        new (a2) el(getstring(number,size,s),number);
         rep.setel(a2,i+size-1,0);//sans barre
         //cout<<a2->getnumber()<<endl;
     }
@@ -60,22 +63,24 @@ Latinrectangle constructiond (Latinrectangle* latin) {
 
     for (int line=1;line<size;line++){
         int number=latin->getel(line,0)->getnumber();
+        string s=latin->getel(line,0)->getsymbols();
         el* a=(el*)malloc(sizeof(el));
-        new (a) el(getstring(number,size),number);
+        new (a) el(getstring(number,size,s),number);
         rep.setel(a,line,line+size-1);
         int column=1;
         while (latin->getel(0,column)->getnumber()!=number){column++;}
         int linel=1;
         while (latin->getel(linel,line)->getnumber()!=number){linel++;}
             //cout<<"linel"<<linel<<endl;
+        string s2=latin->getel(0,line)->getsymbols();
         el* a2=(el*)malloc(sizeof(el));
-        new (a2) el(getstring(latin->getel(0,line)->getnumber()+size-1,size),latin->getel(0,line)->getnumber()+size-1);
+        new (a2) el(getstring(latin->getel(0,line)->getnumber()+size-1,size,s2),latin->getel(0,line)->getnumber()+size-1);
         rep.setel(a2,linel+size-1,line+size-1);
             //cout<<a2->getnumber()<<endl;
             //cout<<linel<<endl;
     }
-        cout<<rep.getel(8,0)->getnumber()<<endl;
-        cout<<"nb"<<rep.getel(1,7)->getnumber()<<endl;
+        //cout<<rep.getel(8,0)->getnumber()<<endl;
+        //cout<<"nb"<<rep.getel(1,7)->getnumber()<<endl;
 
     for (int line=1;line<size;line++){
         int number=latin->getel(line,0)->getnumber();
@@ -93,32 +98,35 @@ Latinrectangle constructiond (Latinrectangle* latin) {
         //cout<<"line"<<latin->getel(columnl,column)->getnumber()<<endl;
         //cout<<"fin"<<endl;
         for (int k=1;k<size;k++){
-            cout<<"columnl"<<columnl<<endl;
-            cout<<"linel"<<linel<<endl;
+            //cout<<"columnl"<<columnl<<endl;
+            //cout<<"linel"<<linel<<endl;
             if (latin->getel(k,columnl)->getnumber()==0){
+                 string s4=latin->getel(columnl,0)->getsymbols();
                 el* a4=(el*)malloc(sizeof(el));
-                new (a4) el(getstring(latin->getel(columnl,0)->getnumber()+size-1,size),latin->getel(columnl,0)->getnumber()+size-1);
+                new (a4) el(getstring(latin->getel(columnl,0)->getnumber()+size-1,size,s4),latin->getel(columnl,0)->getnumber()+size-1);
                 rep.setel(a4,linel+size-1,k);
                 //cout<<a4->getnumber()<<endl;
                 }
             else{
+                string s5=latin->getel(columnl,k)->getsymbols();
                 el* a5=(el*)malloc(sizeof(el));
-                new (a5) el(getstring(latin->getel(columnl,k)->getnumber()+size-1,size),latin->getel(columnl,k)->getnumber()+size-1);
+                new (a5) el(getstring(latin->getel(columnl,k)->getnumber()+size-1,size,s5),latin->getel(columnl,k)->getnumber()+size-1);
                 rep.setel(a5,linel+size-1,k);}
         }
+        string s3=latin->getel(0,column)->getsymbols();
         el* a3=(el*)malloc(sizeof(el));
-        new (a3) el(getstring(latin->getel(0,column)->getnumber(),size),latin->getel(0,column)->getnumber());
+        new (a3) el(getstring(latin->getel(0,column)->getnumber(),size,s3),latin->getel(0,column)->getnumber());
         rep.setel(a3,linel+size-1,column);
-        cout<<column<<endl;
-        cout<<a3->getnumber()<<endl;
+        //cout<<column<<endl;
+        //cout<<a3->getnumber()<<endl;
     }
     //cout<<rep.getel(8,0)->getnumber()<<endl;
     return rep;
 }
 
-string getstring (int number, int size){
+string getstring (int number, int size, string s){
     if (number>size-1)
-    {return to_string(number-size)+"'";}
+    {return s+"a";}
     else
-    {return to_string(number);}
+    {return s+"b";}
 }
