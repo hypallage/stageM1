@@ -27,6 +27,7 @@ else {
         cout<<"Input Matrix:"<<endl;
         l.print();
         Latinrectangle r=constructiond (&l);
+
         cout<<"Output Matix with number:"<<endl;
         r.print();
         cout<<"Output Matix with string:"<<endl;

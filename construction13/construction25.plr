@@ -1,0 +1,26 @@
+25
+0b  1a  2a  3a  4a  5a  6a  7a  8a  9a  10a 11a 12a 1b  2b  3b  4b  5b  6b  7b  8b  9b  10b 11b 12b 
+12a 0b  1b  2b  3b  4b  5b  6b  7b  8b  9b  10b 11b 12b 1a  2a  3a  4a  5a  6a  7a  8a  9a  10a 11a 
+11a 12b 0b  1b  2b  3b  4b  5b  6b  7b  8b  9b  10b 12a 11b 1a  2a  3a  4a  5a  6a  7a  8a  9a  10a 
+10a 11b 12b 0b  1b  2b  3b  4b  5b  6b  7b  8b  9b  11a 12a 10b 1a  2a  3a  4a  5a  6a  7a  8a  9a  
+9a  10b 11b 12b 0b  1b  2b  3b  4b  5b  6b  7b  8b  10a 11a 12a 9b  1a  2a  3a  4a  5a  6a  7a  8a  
+8a  9b  10b 11b 12b 0b  1b  2b  3b  4b  5b  6b  7b  9a  10a 11a 12a 8b  1a  2a  3a  4a  5a  6a  7a  
+7a  8b  9b  10b 11b 12b 0b  1b  2b  3b  4b  5b  6b  8a  9a  10a 11a 12a 7b  1a  2a  3a  4a  5a  6a  
+6a  7b  8b  9b  10b 11b 12b 0b  1b  2b  3b  4b  5b  7a  8a  9a  10a 11a 12a 6b  1a  2a  3a  4a  5a  
+5a  6b  7b  8b  9b  10b 11b 12b 0b  1b  2b  3b  4b  6a  7a  8a  9a  10a 11a 12a 5b  1a  2a  3a  4a  
+4a  5b  6b  7b  8b  9b  10b 11b 12b 0b  1b  2b  3b  5a  6a  7a  8a  9a  10a 11a 12a 4b  1a  2a  3a  
+3a  4b  5b  6b  7b  8b  9b  10b 11b 12b 0b  1b  2b  4a  5a  6a  7a  8a  9a  10a 11a 12a 3b  1a  2a  
+2a  3b  4b  5b  6b  7b  8b  9b  10b 11b 12b 0b  1b  3a  4a  5a  6a  7a  8a  9a  10a 11a 12a 2b  1a  
+1a  2b  3b  4b  5b  6b  7b  8b  9b  10b 11b 12b 0b  2a  3a  4a  5a  6a  7a  8a  9a  10a 11a 12a 1b  
+12b 2a  3a  4a  5a  6a  6b  8a  9a  10a 11a 12a 1a  0b  1b  2b  3b  4b  5b  7a  7b  8b  9b  10b 11b 
+11b 3a  4a  5a  6a  7a  8a  9a  10a 11a 12a 2a  12b 1a  0b  1b  2b  3b  4b  5b  6b  7b  8b  9b  10b 
+10b 4a  5a  6a  7a  5b  9a  10a 11a 12a 3a  1a  2a  11b 12b 0b  1b  2b  3b  4b  8a  6b  7b  8b  9b  
+9b  5a  6a  7a  8a  9a  10a 11a 12a 4a  1a  11b 3a  10b 2a  12b 0b  1b  2b  3b  4b  5b  6b  7b  8b  
+8b  6a  7a  8a  4b  10a 11a 12a 5a  1a  2a  3a  4a  9b  10b 11b 12b 0b  1b  2b  3b  9a  5b  6b  7b  
+7b  7a  8a  9a  10a 11a 12a 6a  1a  2a  10b 4a  5a  8b  9b  3a  11b 12b 0b  1b  2b  3b  4b  5b  6b  
+6b  8a  9a  3b  11a 12a 7a  1a  2a  3a  4a  5a  6a  7b  8b  9b  10b 11b 12b 0b  1b  2b  10a 4b  5b  
+5b  9a  10a 11a 12a 8a  1a  2a  3a  9b  5a  6a  7a  6b  7b  8b  4a  10b 11b 12b 0b  1b  2b  3b  4b  
+4b  10a 2b  12a 9a  1a  2a  3a  4a  5a  6a  7a  8a  5b  6b  7b  8b  9b  10b 11b 12b 0b  1b  11a 3b  
+3b  11a 12a 10a 1a  2a  3a  4a  8b  6a  7a  8a  9a  4b  5b  6b  7b  5a  9b  10b 11b 12b 0b  1b  2b  
+2b  1b  11a 1a  2a  3a  4a  5a  6a  7a  8a  9a  10a 3b  4b  5b  6b  7b  8b  9b  10b 11b 12b 0b  12a 
+1b  12a 1a  2a  3a  4a  5a  7b  7a  8a  9a  10a 11a 2b  3b  4b  5b  6b  6a  8b  9b  10b 11b 12b 0b  

@@ -1,0 +1,10 @@
+9
+0bb 1aa 2aa 1ba 2ba 1ab 2ab 1bb 2bb 
+2aa 0bb 1bb 2bb 1ab 2ab 1ba 2ba 1aa 
+1aa 2bb 0bb 2ab 1bb 2ba 1ab 2aa 1ba 
+2ba 1bb 1ab 0bb 2ab 1ba 1aa 2bb 2aa 
+1ba 2ab 2bb 1ab 0bb 2aa 2ba 1aa 1bb 
+2ab 2ba 1aa 2aa 2bb 0bb 1bb 1ba 1ab 
+1ab 2aa 1ba 1bb 1aa 2bb 0bb 2ab 2ba 
+2bb 1ab 2ba 1aa 1ba 1bb 2aa 0bb 2ab 
+1bb 1ba 2ab 2ba 2aa 1aa 2bb 1ab 0bb 

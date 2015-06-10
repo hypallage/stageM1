@@ -3,3 +3,4 @@ brouillon
 *.exec
 *~
 .plr
+.depend

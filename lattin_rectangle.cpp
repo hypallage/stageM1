@@ -36,7 +36,7 @@ int Latinrectangle::getline(){return this->line;}
 el* Latinrectangle::getel (int l, int c){return this->rectangle.at(c+this->getsize()*l);}
 
 // set fonctions
-void Latinrectangle::setstringsize(int i){this->stringsize=0;}
+void Latinrectangle::setstringsize(int i){this->stringsize=i;}
 
 void Latinrectangle::setsize (int i){this->size= i;}
 
@@ -74,9 +74,9 @@ void Latinrectangle::print1 (){
 		    //cout<<"i"<<i<<endl;
 		    //cout<<"j"<<j<<endl;
 			int a=this->rectangle.at(i + j*this->getsize())->getsymbols().size();
-			int b=1-a+to_string(this->getsize()).size();
+			int b=1-a+this->getstringsize();
 			cout<<this->rectangle.at(i + j*this->getsize())->getsymbols ();
-			for (int l=0;l<=b;l++){
+			for (int l=0;l<b;l++){
 						cout<<" ";
 						}
 			}
@@ -100,14 +100,15 @@ void Latinrectangle::print (){
 	}
 
 void Latinrectangle::write1 (std::string f){
+    //cout<<"g"<<this->getstringsize()<<endl;
 	ofstream fichier(f.c_str(), ios::out);
 	fichier<<this->getsize()<<"\n";
 	for (int j=0;j<this->getline ();j ++){
 		for (int i=0;i<this->getsize ();i++){
 			int a=this->rectangle.at(i + j*this->getsize())->getsymbols().size();
-			int b=1-a+to_string(this->getsize()).size();
+			int b=1-a+this->getstringsize();
 			fichier<<this->rectangle.at(i + j*this->getsize())->getsymbols ();
-			for (int l=0;l<=b;l++){
+			for (int l=0;l<b;l++){
 						fichier<<" ";
 						}
 			}

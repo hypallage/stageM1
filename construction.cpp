@@ -13,6 +13,7 @@ Latinrectangle constructiond (Latinrectangle* latin) {
     int size=latin->getsize();
     vector<int> v;
     Latinrectangle rep=Latinrectangle(2*size-1);
+    rep.setstringsize(latin->getstringsize()+1);
     for (int k=0;k<2*size-1;k++){rep.addline();}
     for (int i=1;i<size;i++){
         for (int j=1;j<size;j++){
@@ -59,7 +60,6 @@ Latinrectangle constructiond (Latinrectangle* latin) {
         rep.setel(a2,i+size-1,0);//sans barre
         //cout<<a2->getnumber()<<endl;
     }
-    //cout<<rep.getel(7,0)->getnumber()<<endl;
 
     for (int line=1;line<size;line++){
         int number=latin->getel(line,0)->getnumber();
@@ -71,6 +71,7 @@ Latinrectangle constructiond (Latinrectangle* latin) {
         while (latin->getel(0,column)->getnumber()!=number){column++;}
         int linel=1;
         while (latin->getel(linel,line)->getnumber()!=number){linel++;}
+            //cout<<"1445"<<endl;
             //cout<<"linel"<<linel<<endl;
         string s2=latin->getel(0,line)->getsymbols();
         el* a2=(el*)malloc(sizeof(el));
@@ -81,7 +82,7 @@ Latinrectangle constructiond (Latinrectangle* latin) {
     }
         //cout<<rep.getel(8,0)->getnumber()<<endl;
         //cout<<"nb"<<rep.getel(1,7)->getnumber()<<endl;
-
+    cout<<"1445"<<endl;
     for (int line=1;line<size;line++){
         int number=latin->getel(line,0)->getnumber();
         int column=1;
