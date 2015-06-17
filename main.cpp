@@ -12,14 +12,10 @@
 using namespace std;
 void lattinall (int );
 
-int main(int argc,char *argv[])
-{
-
+int main(int argc,char *argv[]){/*
 if (argc==1){cout<<"manque d'argument"<<endl;}
 else {
-    //cout<<argv[1]<<endl;
     std::string ring(argv[1]);
-    //cout<<(ring=="-construct")<<endl;
     if (ring=="-construct")
     {
         if (argc==4){
@@ -36,26 +32,14 @@ else {
         }
         else{
         cout<<"Erreur d'argument."<<endl;}
-
-        //cout<<"perfect"<<endl;
-        //perfect(&c);
-        //cout<<"What do you want?"<<endl;
-        //string rep;
-        //cin>>rep;
-        //cout<<rep<<endl;
-        /*Latinrectangle l=openfile ("exemple.plr");
-cout<<l.getline()<<endl;
-//cout<<l.getel(4,3)->getnumber()<<endl;
-cyclearray c=cyclearray (&l);
-Latincheck(&c);
-
-//l.print();
-//c.getlattin()->print();
-
-//c.printcycle(0,0);
-*/  }
+        }
     }
-    return 0;
+    return 0;*/
+    Latinrectangle l=openfile (argv[1]);
+    l.print1();
+    l.print();
+    cyclearray c=cyclearray(&l);
+    Latincheck(&c);
 }
 
 

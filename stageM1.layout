@@ -11,16 +11,16 @@
 		<Cursor position="0" topLine="0" />
 	</File>
 	<File name="element.h" open="1" top="0" tabpos="8">
-		<Cursor position="242" topLine="6" />
+		<Cursor position="242" topLine="0" />
 	</File>
 	<File name="lattin_check.cpp" open="1" top="0" tabpos="3">
 		<Cursor position="3" topLine="0" />
 	</File>
 	<File name="lattin_rectangle.cpp" open="1" top="1" tabpos="2">
-		<Cursor position="3058" topLine="97" />
+		<Cursor position="3058" topLine="84" />
 	</File>
 	<File name="lattin_rectangle.h" open="1" top="0" tabpos="6">
-		<Cursor position="523" topLine="25" />
+		<Cursor position="523" topLine="11" />
 	</File>
 	<File name="main.cpp" open="1" top="0" tabpos="1">
 		<Cursor position="335" topLine="9" />
