@@ -1,0 +1,34 @@
+### Starting build.
+# Target: latin.ml.depends, tags: { extension:ml, file:latin.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep -modules latin.ml > latin.ml.depends # cached
+# Target: check.ml.depends, tags: { extension:ml, file:check.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep -modules check.ml > check.ml.depends
+# Target: parser.ml.depends, tags: { extension:ml, file:parser.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep -modules parser.ml > parser.ml.depends # cached
+# Target: parser.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:parser.cmo, file:parser.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc -c -o parser.cmo parser.ml # cached
+# Target: output.ml.depends, tags: { extension:ml, file:output.ml, ocaml, ocamldep, quiet }
+/usr/bin/ocamldep -modules output.ml > output.ml.depends # cached
+# Target: output.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:output.cmo, file:output.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc -c -o output.cmo output.ml # cached
+# Target: check.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:check.cmo, file:check.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc -c -o check.cmo check.ml
+# Target: latin.cmo, tags: { byte, compile, extension:cmo, extension:ml, file:latin.cmo, file:latin.ml, implem, ocaml, quiet }
+/usr/bin/ocamlc -c -o latin.cmo latin.ml
++ /usr/bin/ocamlc -c -o latin.cmo latin.ml
+File "latin.ml", line 12, characters 1-35:
+Warning 10: this expression should have type unit.
+# Target: parser.cmx, tags: { compile, extension:cmx, extension:ml, file:parser.cmx, file:parser.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt -c -o parser.cmx parser.ml # cached
+# Target: output.cmx, tags: { compile, extension:cmx, extension:ml, file:output.cmx, file:output.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt -c -o output.cmx output.ml # cached
+# Target: check.cmx, tags: { compile, extension:cmx, extension:ml, file:check.cmx, file:check.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt -c -o check.cmx check.ml
+# Target: latin.cmx, tags: { compile, extension:cmx, extension:ml, file:latin.cmx, file:latin.ml, implem, native, ocaml, quiet }
+/usr/bin/ocamlopt -c -o latin.cmx latin.ml
++ /usr/bin/ocamlopt -c -o latin.cmx latin.ml
+File "latin.ml", line 12, characters 1-35:
+Warning 10: this expression should have type unit.
+# Target: latin.native, tags: { dont_link_with, extension:native, file:latin.native, link, native, ocaml, program, quiet }
+/usr/bin/ocamlopt unix.cmxa parser.cmx check.cmx output.cmx latin.cmx -o latin.native
+# Compilation successful.
