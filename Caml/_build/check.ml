@@ -58,7 +58,7 @@ let rec calculcycleline latin posc posl lineh lineb vu rep=
 let rec checkcycle latin posc posl rep lineh lineb=
 		if (lineh=lineb)
 		then (if (lineb=Array.length latin-1)
-			then rep
+			then ()
 			else checkcycle latin posc posl rep 0 (lineb+1))
 		else (let vu=Array.create (Array.length latin) false in
 			rep.(lineb).(lineh)<-calculcycleline latin posc posl lineh lineb vu [];

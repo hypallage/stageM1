@@ -1,1 +1,1 @@
-output.ml: Array String
+output.ml: Array List String
