@@ -4,3 +4,6 @@ brouillon
 *~
 .plr
 .depend
+*build/
+*Latin
+*latin.native

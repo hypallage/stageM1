@@ -9,7 +9,9 @@ let rec check corres l cha d= if (l=d)
 ;;
 
 let rec read1lchar latin corres tring cha l n=if (n>=String.length tring)
-				then ()
+				then (check corres l cha 0;
+					corres.(l)<-cha;
+					latin.(0).(l)<-l;)
 				else
 					(if (tring.[n]=' ')
 					then (
@@ -32,7 +34,8 @@ let rec search corres cha n= if (n>=Array.length corres)
 
 
 let rec readlchar ligne latin corres tring cha l n=if (n>=String.length tring)
-				then ()
+				then (let a=search corres cha 0 in
+						latin.(ligne).(l)<-a;)
 				else
 					(if (tring.[n]=' ')
 					then (

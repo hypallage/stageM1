@@ -2,7 +2,7 @@ open Parser
 
 let rec printnumber latin corres line column=
 	if (column=Array.length latin)
-		then (if (line=16)
+		then (if (line=Array.length latin-1)
 			then (print_char '\n';)
 			else (print_char '\n';printnumber latin corres (line+1) 0))
 		else (print_int  latin.(line).(column);print_char ' ';printnumber latin corres line (column+1))
@@ -10,7 +10,7 @@ let rec printnumber latin corres line column=
 
 let rec printsymbols latin corres line column=
 	if (column=Array.length latin)
-		then (if (line=16)
+		then (if (line=Array.length latin-1)
 			then (print_char '\n';)
 			else (print_char '\n';printsymbols latin corres (line+1) 0))
 		else (print_string  corres.(latin.(line).(column));print_char ' ';printsymbols latin corres line (column+1))
