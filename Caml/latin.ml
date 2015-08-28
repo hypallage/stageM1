@@ -1,6 +1,7 @@
 open Parser
 open Check
 open Output
+open Calcul
 
 let main = let (latin,corres)=openlatin Sys.argv.(1) in
 	let size=Array.length latin in
@@ -14,3 +15,4 @@ let main = let (latin,corres)=openlatin Sys.argv.(1) in
 	output_string fichier "graph{\n";
 	creefichier corres rep fichier 0 0	
 ;;
+

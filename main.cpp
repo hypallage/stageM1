@@ -12,7 +12,7 @@
 using namespace std;
 void lattinall (int );
 
-int main(int argc,char *argv[]){/*
+int main(int argc,char *argv[]){
 if (argc==1){cout<<"manque d'argument"<<endl;}
 else {
     std::string ring(argv[1]);
@@ -34,13 +34,10 @@ else {
         cout<<"Erreur d'argument."<<endl;}
         }
     }
-    return 0;*/
-    Latinrectangle l=openfile (argv[1]);
-    l.print1();
-    l.print();
-    cyclearray c=cyclearray(&l);
-    Latincheck(&c);
+    return 0;
+
 }
+    
 
 
 
